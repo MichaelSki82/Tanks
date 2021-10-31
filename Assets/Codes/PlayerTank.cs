@@ -13,20 +13,18 @@ namespace Tanks2021
         [SerializeField] private Rigidbody _bullet;
         [SerializeField] private Transform _startPosition;
         [SerializeField] private float _speedBullet;
+        private float _rotateTower = 0;
 
-       private PlayerTank _tank;
+      
 
         Shooting shoot;
 
         void Start()
         {
 
-            _tank = new PlayerTank();
-            
+                      
             shoot = new Shooting(_startPosition, _bullet, _speedBullet);
-
-
-            
+                        
         }
 
     
@@ -38,10 +36,20 @@ namespace Tanks2021
             {
 
                 shoot.Shoot();
-
+                
             }
 
-            
+            //void RotatesTower()
+            //{
+                
+            //    //поворот башни 
+                
+            //    AngleRotate = Time.deltaTime * RotateSpeed * Input.GetAxis("Mouse X");
+                
+
+            //    //после поворота башни обнуляем значнеие 
+            //    RotateTower = 0;
+            //}
         }
     }
 }
