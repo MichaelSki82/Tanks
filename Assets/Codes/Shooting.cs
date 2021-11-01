@@ -24,7 +24,7 @@ namespace Tanks2021
 
             var temAmmunition = Object.Instantiate(_bullet, _startPosition.position, _startPosition.rotation);
             temAmmunition.AddForce(_startPosition.forward * _speedBullet);
-            Object.Destroy(temAmmunition.gameObject, 3f);
+            //Object.Destroy(temAmmunition.gameObject, 3f);
 
         }
 
